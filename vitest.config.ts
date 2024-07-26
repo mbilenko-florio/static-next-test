@@ -6,5 +6,8 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     include: ['./app/**/*.{test,spec}*.{ts,tsx}'],
+    coverage: {
+      include: ['app'],
+    },
   },
 });
