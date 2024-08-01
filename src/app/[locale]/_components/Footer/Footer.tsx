@@ -8,7 +8,7 @@ export const Footer = async ({ locale }: { locale: Locale }) => {
   return (
     <footer style={{ marginTop: 50 }}>
       <Trans i18nKey="languageSwitcher" t={t}>
-        Switch from <strong>{{ locale }}</strong> to:{' '}
+        Switch from <strong>{locale}</strong> to:{' '}
       </Trans>
       {locales
         .filter((l) => locale !== l)
