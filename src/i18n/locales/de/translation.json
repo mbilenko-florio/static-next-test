@@ -1,0 +1,8 @@
+{
+  "title": "Hallo Welt!",
+  "about": "über Uns",
+
+  "counter_one": "eines ausgewählt",
+  "counter_other": "{{count}} ausgewählt",
+  "counter_zero": "keines ausgewählt"
+}

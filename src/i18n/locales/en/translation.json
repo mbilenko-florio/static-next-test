@@ -1,0 +1,8 @@
+{
+  "title": "Hello world!",
+  "about": "About Us",
+
+  "counter_one": "one selected",
+  "counter_other": "{{count}} selected",
+  "counter_zero": "none selected"
+}
