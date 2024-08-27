@@ -11,9 +11,9 @@ export const useRedirect = () => {
   // language detection
   useEffect(() => {
     const detectedLng = languageDetector.detect();
-    if (pathname.startsWith('/' + detectedLng) && pathname === '/404') {
+
+    if (pathname.startsWith('/' + detectedLng)) {
       // prevent endless loop
-      router.replace('/' + detectedLng + pathname);
       return;
     }
 
