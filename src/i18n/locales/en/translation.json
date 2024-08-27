@@ -1,7 +1,11 @@
 {
+  "home": "Home",
+  "dashboard": "Dashboard",
+
   "title": "Hello world!",
   "about": "About Us",
 
+  "counter": "Counter",
   "counter_one": "one selected",
   "counter_other": "{{count}} selected",
   "counter_zero": "none selected"

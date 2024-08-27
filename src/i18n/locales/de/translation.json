@@ -1,7 +1,11 @@
 {
+  "home": "Start",
+  "dashboard": "Übersicht",
+
   "title": "Hallo Welt!",
   "about": "Über Uns",
 
+  "counter": "Zähler",
   "counter_one": "eines ausgewählt",
   "counter_other": "{{count}} ausgewählt",
   "counter_zero": "keines ausgewählt"
