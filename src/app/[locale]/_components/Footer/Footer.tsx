@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { locales } from '@/src/i18n/settings';
-import { Locale } from '@/src/i18n';
+import { locales } from '@/i18n/settings';
+import { Locale } from '@/i18n';
 import { usePathname } from 'next/navigation';
 
 const removeLocale = (input: string) => {
@@ -15,7 +15,7 @@ export const Footer = ({ locale }: { locale: Locale }) => {
   const pathWithoutLocale = removeLocale(pathname);
 
   return (
-    <footer style={{ marginTop: 50 }}>
+    <footer>
       {locales
         .filter((l) => locale !== l)
         .map((l, index) => {

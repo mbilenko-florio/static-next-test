@@ -1,4 +1,4 @@
 'use client';
 
-import { Redirect } from '@/src/i18n/Redirect';
+import { Redirect } from '@//i18n/Redirect';
 export default Redirect;

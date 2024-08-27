@@ -1,6 +1,7 @@
 'use client';
 
-import { Locale, useTranslation } from '@/src/i18n';
+import { Button } from '@/components/ui/button';
+import { Locale, useTranslation } from '@/i18n';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -14,13 +15,9 @@ export default function Page({ params: { locale } }: { params: { locale: Locale 
       <Link href={`/${locale}/`}>{t('title')}</Link>
 
       <p>{t('counter', { count: counter })}</p>
-      <div>
-        <button className="px-4 py-2" onClick={() => setCounter(Math.max(0, counter - 1))}>
-          -
-        </button>
-        <button className="px-4 py-2" onClick={() => setCounter(Math.min(10, counter + 1))}>
-          +
-        </button>
+      <div className="flex gap-4">
+        <Button onClick={() => setCounter(Math.max(0, counter - 1))}>-</Button>
+        <Button onClick={() => setCounter(Math.min(10, counter + 1))}>+</Button>
       </div>
     </div>
   );

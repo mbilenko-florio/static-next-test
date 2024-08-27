@@ -1,6 +1,6 @@
 'use client';
 
-import { useRedirect } from '@/src/i18n/Redirect';
+import { useRedirect } from '@//i18n/Redirect';
 import Link from 'next/link';
 
 export default function NotFound() {
