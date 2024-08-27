@@ -12,6 +12,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { getOptions, locales, cookieName } from './settings';
 import { Locale } from './settings';
+import { usePathname } from 'next/navigation';
 
 const runsOnServerSide = typeof window === 'undefined';
 
@@ -29,11 +30,15 @@ i18next
     preload: runsOnServerSide ? locales : [],
   });
 
-export function useTranslation(
-  locale: Locale,
-  ns?: string,
-  options?: UseTranslationOptions<undefined>,
-) {
+export const getLocaleFromPath = (pathname: string): Locale => {
+  const match = pathname.match(/^\/([^/]+)(?:\/|$)/);
+  return match && locales.includes(match[1] as Locale) ? (match[1] as Locale) : 'en';
+};
+
+export function useTranslation(ns?: string, options?: UseTranslationOptions<undefined>) {
+  const pathname = usePathname();
+  const locale = getLocaleFromPath(pathname);
+
   const [cookies, setCookie] = useCookies([cookieName]);
   const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
