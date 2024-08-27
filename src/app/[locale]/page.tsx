@@ -1,4 +1,5 @@
-import { type Locale, getTranslation } from '@/src/i18n';
+import type { Locale } from '@/src/i18n';
+import { getTranslation } from '@/src/i18n';
 import Link from 'next/link';
 
 export default async function Home({ params: { locale } }: { params: { locale: Locale } }) {
@@ -7,7 +8,7 @@ export default async function Home({ params: { locale } }: { params: { locale: L
   return (
     <div>
       <h1>{t('title')}</h1>
-      <Link href={`/${locale}/about`}>About</Link>
+      <Link href={`/${locale}/about`}>{t('about')}</Link>
     </div>
   );
 }

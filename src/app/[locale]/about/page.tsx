@@ -11,7 +11,7 @@ export default function Page({ params: { locale } }: { params: { locale: Locale 
   return (
     <div>
       <h1>{t('about')}</h1>
-      <Link href={`/${locale}/`}>Home</Link>
+      <Link href={`/${locale}/`}>{t('title')}</Link>
 
       <p>{t('counter', { count: counter })}</p>
       <div>
