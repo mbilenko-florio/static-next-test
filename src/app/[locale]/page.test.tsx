@@ -5,5 +5,5 @@ import Page from './page';
 test('Page', async () => {
   render(await Page({ params: { locale: 'en' } }));
   expect(screen.getByRole('heading', { level: 1 })).toBeDefined();
-  expect(screen.getByRole('link', { name: 'About Us' })).toBeDefined();
+  expect(screen.getByRole('link', { name: 'Dashboard' })).toBeDefined();
 });
