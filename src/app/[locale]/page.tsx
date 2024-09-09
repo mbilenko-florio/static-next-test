@@ -1,11 +1,12 @@
+'use client';
 import type { Locale } from '@//i18n';
-import { getTranslation } from '@//i18n';
+import { useTranslation } from '@//i18n';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-export default async function Home({ params: { locale } }: { params: { locale: Locale } }) {
-  const { t } = await getTranslation(locale);
+export default function Home({ params: { locale } }: { params: { locale: Locale } }) {
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col justify-center gap-8 px-12 py-24">
